@@ -1,0 +1,65 @@
+/* LAYOUT STYLES */
+
+.page {
+	display : block;
+	width   : 960px;
+	clear   : both;
+	margin-left   : auto;
+	margin-right  : auto;
+	margin-top    : 0;
+	margin-bottom : 0;
+}
+
+.page-header  {
+	display : block;
+	width   : 100%;
+	clear   : both;
+}
+.page-content {
+	display : block;
+	width   : 100%;
+	clear   : both;
+}
+.page-footer  {
+	display : block;
+	width   : 100%;
+	clear   : both;
+}
+
+.content-nav   {
+	display : block;
+	width   : 25%;
+	float   : left;
+}
+.content-main  {
+	display : block;
+	width   : 50%;
+	float   : left;
+}
+.content-aside {
+	display : block;
+	width   : 25%;
+	float   : left;
+}
+
+div {
+	background : rgba(200,0,0,0.15);
+}
+div.page-footer {
+	background : rgba(0,200,0,0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de-DE">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Layout</title>
+
+	<link rel="stylesheet" href="sources/css/base.css">
+	<link rel="stylesheet" href="sources/css/layout.css">
+
+	<link rel="stylesheet" href="sources/css/forms.css">
+	<link rel="stylesheet" href="sources/css/navigation.css">
+
+	<link rel="stylesheet" href="sources/css/states.css">
+</head>
+<body>
+	<div class="page">
+		<div class="page-header">{header}</div>
+		
+		<div class="page-content">
+
+			<div class="content-nav">
+				<!-- Navigationkomponente -->
+				<nav class="nav nav-vertical">
+					<ul role="navigation">
+						<li><a href="links.html">Linktext</a></li>
+						<li><a href="links.html">Linktext</a></li>
+						<li><a href="links.html">Linktext</a></li>
+					</ul>
+				</nav>
+				<!-- /Navigationkomponente -->
+			</div>
+		
+			<div class="content-main">{main}</div>
+		
+			<div class="content-aside">{aside}</div>
+		
+		</div>
+
+		<div class="page-footer">
+
+			<!-- Navigationkomponente -->
+			<nav class="nav nav-horizontal">
+				<ul role="navigation">
+					<li><a href="links.html">Linktext</a></li>
+					<li><a href="links.html">Linktext</a></li>
+					<li><a href="links.html">Linktext</a></li>
+				</ul>
+			</nav>
+			<!-- /Navigationkomponente -->
+
+		</div>
+	</div>
+</body>
+</html>

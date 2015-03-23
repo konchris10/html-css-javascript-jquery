@@ -1,0 +1,58 @@
+// Selektoren in CSS
+
+Basiselektoren
+
+body { font-size : 16px; } // Elementeselektor
+p { font-size : 1em; line-height : 1.428; }
+
+#header-nav { ...} // ID-Selektor
+nav#header-nav { ... }
+
+.nav {} // Klassenselektor
+nav.nav {}
+
+a[href] {} // Minified Attribute Selector
+input[type=text] {} // Attribute Selector
+
+[data-tooltip] {}
+
+.nav ul *:hover {} // Pseudoklasse
+:active, :visited, :link
+:focus, :blur
+:valid, :invalid
+
+.my-class:hover
+
+:before, :after   // Pseudoelemente
+::before, ::after // CSS3-Schreibweise
+
+.nav li::before {
+	content : 'text'
+}
+
+
+
+
+// Strukturen abfragen
+body * {} // Descendant Selector (Nachfahren)
+p > em {} // Child Selector
+.nav > ul > li {} // Erste Menüebene
+
+.nav ul ul >li
+
+
+p > em ~ em // General Following Sibling Selector
+p > em + em // Adjactend Following Sibling Selector
+
+
+.page-header  [class*=page-]
+
+
+
+
+
+
+
+
+
+

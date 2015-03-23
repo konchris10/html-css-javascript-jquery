@@ -1,0 +1,27 @@
+/**
+ * FORMS STYLE
+ *
+ * LONG DESC
+ * @author
+ */
+
+
+ /* base */
+
+
+ /* layout */
+ .form-horizontal .form-element {
+ 	display : inline-block;
+ } 
+ .form-vertical .form-element  {
+ 	display : block;
+ } 
+
+ .form-element-horizontal > * {
+ 	display : inline-block;
+ } 
+ .form-element-vertical  > * {
+ 	display : block;
+ } 
+
+ /* states */

@@ -1,0 +1,94 @@
+/**
+ * BASE STYLE
+ *
+ * LONG DESC
+ * @author
+ */
+
+body * {
+	box-sizing : border-box; /* CSS3 (ab IE 8)*/
+}
+
+body {
+	font-family : sans-serif;
+	font-weight : normal;
+	font-size   : 16px;  /* Basismaß für ein em */
+}
+
+/* BASE für Naviagationgruppen */
+nav ul, nav li {
+	list-style : none;
+	margin     : 0;
+	padding    : 0;
+}
+
+/* BASE für Tabellen */
+table {
+	border : 1px solid black;
+	width  : 100%;
+}
+tr {
+	border : 1px solid gray;
+}
+
+/* XTRASMALL */
+@media screen and (max-width : 480px) {
+	body {
+		font-family : sans-serif;
+		font-weight : normal;
+		font-size   : 12px;  
+	}
+}
+
+/* SMALL */
+@media screen and (min-width : 481px) {} 
+
+/* MEDIUM */
+@media screen and (min-width : 768px) {} 
+
+/* LARGE */
+@media screen and (min-width : 1024px) {} 
+
+/* XTRALARGE */
+@media screen and (min-width : 1600px) {} 
+
+/* FULL HD */
+@media screen and (min-width : 1920px) {} 
+
+
+
+
+
+
+
+
+
+/* BASE */
+.form-element-group {
+	border : 1px dotted black;
+}
+
+/* LAYOUT */
+.form-element-group-vertical * {
+	display : block;
+}
+.form-element-group-horizontal * {
+	display : inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
