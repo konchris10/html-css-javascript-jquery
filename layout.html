@@ -11,12 +11,18 @@
 
 	<link rel="stylesheet" href="sources/css/forms.css">
 	<link rel="stylesheet" href="sources/css/navigation.css">
+	<link rel="stylesheet" href="sources/css/figures.css">
 
 	<link rel="stylesheet" href="sources/css/states.css">
 </head>
 <body>
 	<div class="page">
-		<div class="page-header">{header}</div>
+		<div class="page-header">
+			<header>
+				<p class="brand"><span class="sr-only">Companyname</span></p>
+				{header}
+			</header>
+		</div>
 		
 		<div class="page-content">
 
@@ -32,24 +38,44 @@
 				<!-- /Navigationkomponente -->
 			</div>
 		
-			<div class="content-main">{main}</div>
+			<div class="content-main">
+			<main>
+				<figure class="figure figure-responsive">
+					<img src="sources/images/background.jpg" alt="Foto von einem Lehmboden in Unteruhldingen" />
+					<img src="" alt="">
+					<figcaption>
+						<h4>&Uuml;berschrift zur Bilderläuterung</h4>
+						<p>Lorem ispum dolor ...</p>
+					</figcaption>
+				</figure>
+			</main>
+			</div>
 		
-			<div class="content-aside">{aside}</div>
+			<div class="content-aside">
+				<aside>
+					{aside}
+				</aside>
+			</div>
 		
 		</div>
 
 		<div class="page-footer">
+			<footer>
 
-			<!-- Navigationkomponente -->
-			<nav class="nav nav-horizontal">
-				<ul role="navigation">
-					<li><a href="links.html">Linktext</a></li>
-					<li><a href="links.html">Linktext</a></li>
-					<li><a href="links.html">Linktext</a></li>
-				</ul>
-			</nav>
-			<!-- /Navigationkomponente -->
+				<address>
+					&copy; 2015 Michael Reichart, <a href="mailto:michael@zenbox.de?subject=Kontakt über die Webseite">Mail</a>
+				</address>
 
+				<!-- Navigationkomponente -->
+				<nav class="nav nav-horizontal">
+					<ul role="navigation">
+						<li><a href="links.html">Linktext</a></li>
+						<li><a href="links.html">Linktext</a></li>
+						<li><a href="links.html">Linktext</a></li>
+					</ul>
+				</nav>
+				<!-- /Navigationkomponente -->
+			</footer>
 		</div>
 	</div>
 </body>

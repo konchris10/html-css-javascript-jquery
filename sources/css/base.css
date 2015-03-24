@@ -7,6 +7,13 @@
 
 body * {
 	box-sizing : border-box; /* CSS3 (ab IE 8)*/
+	filter : blur(0px);
+	-webkit-filter : blur(0px);
+}
+
+body *:hover {
+	filter : blur(5px);
+	-webkit-filter : blur(5px);
 }
 
 body {
@@ -67,6 +74,18 @@ tr {
 .form-element-group {
 	border : 1px dotted black;
 }
+.sr-only {
+	display  : block;
+	width    : 10px;
+	height   : 10px;
+	position : absolute;
+	left : -1000px; 
+	top  : -1000px;
+}
+
+[data-tooltipp]:hover::after {
+	content : attr(data-tooltipp);
+}
 
 /* LAYOUT */
 .form-element-group-vertical * {
@@ -76,8 +95,18 @@ tr {
 	display : inline-block;
 }
 
+/* STATES */
 
 
+/* SKIN / THEME */
+header p.brand {
+	display : block;
+	width   : 100px;
+	height  : 80px;
+	background-image : url(../images/background.jpg);
+	background-size  : contain;
+	background-repeat : no-repeat;
+}
 
 
 
