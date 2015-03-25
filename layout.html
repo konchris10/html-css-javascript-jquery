@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="sources/css/figures.css">
 
 	<link rel="stylesheet" href="sources/css/states.css">
+
 </head>
 <body>
 	<div class="page">
@@ -30,9 +31,9 @@
 				<!-- Navigationkomponente -->
 				<nav class="nav nav-vertical">
 					<ul role="navigation">
-						<li><a href="links.html">Linktext</a></li>
-						<li><a href="links.html">Linktext</a></li>
-						<li><a href="links.html">Linktext</a></li>
+						<li><a data-format="json" href="data.json">Data</a></li>
+						<li><a href="link2.html">Linktext</a></li>
+						<li><a href="link3.html">Linktext</a></li>
 					</ul>
 				</nav>
 				<!-- /Navigationkomponente -->
@@ -77,17 +78,19 @@
 				<!-- Navigationkomponente -->
 				<nav class="nav nav-horizontal">
 					<ul role="navigation">
-						<li><a href="links.html">Linktext</a></li>
-						<li><a href="links.html">Linktext</a></li>
-						<li><a href="links.html">Linktext</a></li>
+						<li><a href="link4.html">Linktext</a></li>
+						<li><a href="link5.html">Linktext</a></li>
+						<li><a href="link6.html">Linktext</a></li>
 					</ul>
 				</nav>
 				<!-- /Navigationkomponente -->
 			</footer>
 		</div>
 	</div>
-
-	<script src="sources/js/module-block-pattern.js"></script>
+	
+	<script defer="defer" src="../libraries/jquery-2.1.3.min.js"></script>
+	<script defer="defer" src="sources/js/ajax.js"></script>
+	<script defer="defer" src="sources/js/interface.js"></script>
 
 </body>
 </html>

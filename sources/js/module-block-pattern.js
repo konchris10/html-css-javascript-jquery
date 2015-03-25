@@ -1,10 +1,14 @@
-// SCOPES in Javascript
+// Das Module Block Pattern
+// Scopes und das IEFE - Immediate Evoked Function Expression Pattern
 
-var app = window.app || new Object();
+var gek = window.gek || new Object();
 
 
-app.interface = (function () {
-	var fn = {};
+gek.interface = (function () {
+	var 
+		a  = 1,   // privat!
+		fn = {},  // public
+	endvar;
 
 	fn.log = function (m) {
 		console.log(m);
@@ -13,4 +17,6 @@ app.interface = (function () {
 	return fn;
 })();
 
-app.interface.log('hallo Objekt!');
+gek.interface.log('hallo Objekt!');
+
+gek.interface.a // undefined
