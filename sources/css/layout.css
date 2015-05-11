@@ -1,65 +1,68 @@
-/* LAYOUT STYLES */
+/* 
+	PAGE LAYOUT 
+	Dimensionierung und Positionierung
 
-.page {
-	display : block;
-	width   : 100%;
-	clear   : both;
-	margin-left   : auto;
-	margin-right  : auto;
-	margin-top    : 0;
-	margin-bottom : 0;
+	display
+	width, height, (min-/max-)
+	margin, padding [, border]
+	float, clear
+
+	position
+
+	box-sizing
+
+*/
+@media screen {
+	.page         {
+		display : block;
+		width   : 960px;
+		clear   : left;
+		margin-top    : 0;
+		margin-bottom : 0;
+		margin-left   : auto;
+		margin-right  : auto;
+	}
+	.page-header  {
+		display : block;
+		width   : 100%;
+		clear   : both;
+	}
+	.page-content {
+		display : block;
+		width   : 100%;
+		clear   : both;
+	}
+	.page-footer  {
+		display : block;
+		width   : 100%;
+		clear   : both;
+	}
+
+	.content-nav   {
+		display : block;
+		width   : 25%;
+		float   : left;
+	}
+	.content-main  {
+		display : block;
+		width   : 50%;
+		float   : left;
+	}
+	.content-aside {
+		display : block;
+		width   : 25%;
+		float   : left;
+	}
+}
+@media screen and (max-width:480px) {
+	.page { width : 100%; }
+	.content-main  { display : block; float : none; width : 100%; }
+	.content-nav   { display : none;  float : none; width : 100%; }
+	.content-aside { display : none;  float : none; width : 100%; }
 }
 
-.page-header  {
-	display : block;
-	width   : 100%;
-	clear   : both;
+@media print {
+	.nav {
+		display : none;
+	}
 }
-.page-content {
-	display : block;
-	width   : 100%;
-	clear   : both;
-}
-.page-footer  {
-	display : block;
-	width   : 100%;
-	clear   : both;
-}
-
-.content-nav   {
-	display : block;
-	width   : 25%;
-	float   : left;
-}
-.content-main  {
-	display : block;
-	width   : 50%;
-	float   : left;
-}
-.content-aside {
-	display : block;
-	width   : 25%;
-	float   : left;
-}
-
-div {
-	background : rgba(200,0,0,0.15);
-}
-div.page-footer {
-	background : rgba(0,200,0,0.15);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

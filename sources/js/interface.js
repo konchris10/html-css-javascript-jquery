@@ -1,117 +1,54 @@
 // INTERFACE
+// Module Block Pattern
+var gek = window.gek || {};
 
-var gek = window.gek || new Object();
-
-gek.interface = (function ($, window, document) {
-'use strict'; // PFLICHT!
+gek.interface = (function (user) {
+'use strict';
 // - - - - -
-	// Deklaration / Inititalisierung
+	// Deklaration
 	var 
-		DEBUG = true,
-		fn = {},
-		loadContent = function () {},
+		fn    = function () {},
+		data  = {},
 	endvar;
 
 	// Funktionsobjekte
-	fn.log = function (m) {
-		if (DEBUG) {
-			console.log(m);
-		};
+	fn.onSubmit = function (event) {
+		console.log('submit!');
+		event.preventDefault();
+
+		data.url    = event.target.getAttribute('action');
+		data.target = event.target;
+		data.data   = {key : 'value'};
+		// - - - -
+		user.login(data);
 	};
-	fn.loadContent = function (url) {
-		var request = undefined;
-
-		request = $.ajax({
-			url      : url,
-			type     : 'get',
-			dataType : 'xml', // 'html', 'xml', 'script', 'json', 'jsonp'
-
-			data : {key : 'value'}
-
-		});
-
-		request
-			.done(function (response) {
-				fn.log('ajax success!');
-				fn.log(response);
-				// fn.setContent(response);
-			})
-			.fail(function (xhr, state, errorThrown) {
-				fn.log('ajax error!' + state);
-			})
-			.always(function () {
-				fn.log('ajax always!');
-			});
-	};
-	fn.setContent = function (response) {
-		fn.log(response);
-
-		$('.content-main main')
-			.hide()
-			.prepend(response)
-			.fadeIn(1000)
-			;
-
-		// var context = document.querySelector('.content-main main');
-		// context.innerHTML = response;
-	};
-
-	// Eventhandler
 
 	fn.onClick = function (event) {
-		var url = undefined;
-
+		console.log('click!');
 		event.preventDefault();
-		event.stopPropagation();
-
-		fn.log(event.target);
-
-		url = event.target.getAttribute('href');
-		fn.loadContent(url);
-
-		jQuery('.nav').off('click','a', gek.interface.onClick);
-
 	};
 
+	
 
 	// Publikation
 	return fn;
 // - - - - -
-})(jQuery, window, document);
-
-gek.interface.log('hallo Interface!');
+})(gek.user);
 
 
-jQuery(document).ready(function () {
-'use strict';
-// - - - - -
-
+window.onload = function () {
+	// Variablendeklaration
+	var
+		collection = [],
+	endvar;
 	// Eventlistener
-	jQuery('.nav').one('click','a', gek.interface.onClick);
+	document
+		.querySelector('#form-login')
+		.addEventListener('submit', gek.interface.onSubmit );
 
-// - - - - -
-});
+	collection = document.querySelectorAll('.nav');
+	for (var i=0; i<collection.length; i++) {
+		collection[i].addEventListener('click', gek.interface.onClick);
+	}
 
-
-// // DOM Prüfung, um DOM Zugriffe zu gewährleisten!
-// window.onload = function () {
-// 	// Eventlistener
-// 	var collection = document.querySelectorAll('.nav');
-	
-// 	for (var i=0; i<collection.length; i++) {
-// 		collection[i].addEventListener(
-// 			'click',                   // Eventtyp
-// 			gek.interface.onClick,     // Eventhandler
-// 			true                      // useCapturing?
-// 		);
-// 	}
-// };
-
-
-
-
-
-
-
-
-
+}

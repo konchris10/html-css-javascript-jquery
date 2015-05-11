@@ -1,96 +1,131 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de-DE">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="UTF-8" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-	<title>Layout</title>
+	<meta name="viewport" content="width=device-width" />
 
-	<link rel="stylesheet" href="sources/css/base.css">
-	<link rel="stylesheet" href="sources/css/layout.css">
+	<title>Titel der Seite/App</title>
 
-	<link rel="stylesheet" href="sources/css/forms.css">
-	<link rel="stylesheet" href="sources/css/navigation.css">
-	<link rel="stylesheet" href="sources/css/figures.css">
-
-	<link rel="stylesheet" href="sources/css/states.css">
+	<link rel="stylesheet" href="sources/css/base.css" />
+	<link rel="stylesheet" href="sources/css/layout.css" />
+	<link rel="stylesheet" href="sources/css/navigation.css" />
+	<link rel="stylesheet" href="sources/css/forms.css" />
+	<link rel="stylesheet" href="sources/css/skin.css" />
 
 </head>
 <body>
+	
 	<div class="page">
+	<section>
+		<title>Titel der Sektion</title>
 		<div class="page-header">
 			<header>
-				<p class="brand"><span class="sr-only">Companyname</span></p>
-				{header}
-			</header>
-		</div>
-		
-		<div class="page-content">
-
-			<div class="content-nav">
-				<!-- Navigationkomponente -->
-				<nav class="nav nav-vertical">
-					<ul role="navigation">
-						<li><a data-format="json" href="data.json">Data</a></li>
-						<li><a href="link2.html">Linktext</a></li>
-						<li><a href="link3.html">Linktext</a></li>
+				<!-- Navigationskomponente -->
+				<nav class="nav nav-right">
+					<ul>
+						<li><a href="link1.html">Link 1</a></li>
+						<li><a href="link2.html">Link 2</a></li>
+						<li><a href="link3.html">Link 3</a></li>
 					</ul>
 				</nav>
-				<!-- /Navigationkomponente -->
+				<!-- /Navigationskomponente -->
+			</header>
+		</div>
+
+		<div class="page-content">
+			<div class="content-nav">
+				
+				<!-- Navigationskomponente -->
+				<nav class="nav nav-vertical">
+					<ul>
+						<li><a href="link1.html">Link 1</a></li>
+						<li><a href="link2.html">Link 2</a></li>
+						<li><a href="link3.html">Link 3</a></li>
+					</ul>
+				</nav>
+				<!-- /Navigationskomponente -->
+
 			</div>
-		
 			<div class="content-main">
-			<main>
+				<main>
+					<span class="article article-teaser">
+					
+					<!-- Teaserkomponente -->
+					<article>
+						<header>
+							<h1>Artikelüberschrift</h1>
+							<time datetime="30.03.2015">Heute</time>
+							<address>Michael Reichart</address>
+						</header>
+						<main>
+						<figure>
+							<img width="100%" src="sources/images/background.jpg" alt="">
+							<figcaption>
+								<h4>Bildunterschrift</h4>
+								<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean <strong>lacinia bibendum nulla sed consectetur</strong>. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+							</figcaption>
+						</figure>
+						<h2>Artikelüberschrift</h2>
+						<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						</main>
+					</article>
+					<!-- /Teaserkomponente -->
 
-				<article class="article article-hero">
-					<h2>Die ganz wichtige Überschrift</h2>
-					<p>Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-
-					<figure class="figure figure-responsive">
-						<img src="sources/images/background.jpg" alt="Foto von einem Lehmboden in Unteruhldingen" />
-						<img src="" alt="">
-						<figcaption>
-							<h4>&Uuml;berschrift zur Bilderläuterung</h4>
-							<p>Lorem ispum dolor ...</p>
-						</figcaption>
-					</figure>
-				</article>
-
-
-			</main>
+					</span>
+				</main>
 			</div>
-		
 			<div class="content-aside">
 				<aside>
-					{aside}
+
+					<!-- Loginformkomponente -->
+					<form id="form-login" action="app/login.php" class="form form-vertical">
+						
+						<div class="form-element form-element-vertical">
+							<label for="login-email">Email</label>
+							<input  id="login-email" type="email" name="email" value="michael@zenbox.de" />
+						</div>
+
+						<div class="form-element form-element-vertical">
+							<label for="login-password">Passwort</label>
+							<input  id="login-password" type="password" name="password" value="geheim" />
+						</div>
+
+						<div class="form-element form-element-vertical">
+							<input type="submit" value="Login">
+							<input type="reset" value="Zurücksetzen">
+						</div>
+
+					</form>
+					<!-- /Loginformkomponente -->
+
 				</aside>
 			</div>
-		
 		</div>
 
 		<div class="page-footer">
 			<footer>
-
-				<address>
-					&copy; 2015 Michael Reichart, <a href="mailto:michael@zenbox.de?subject=Kontakt über die Webseite">Mail</a>
-				</address>
-
-				<!-- Navigationkomponente -->
+				<!-- Navigationskomponente -->
 				<nav class="nav nav-horizontal">
-					<ul role="navigation">
-						<li><a href="link4.html">Linktext</a></li>
-						<li><a href="link5.html">Linktext</a></li>
-						<li><a href="link6.html">Linktext</a></li>
+					<ul>
+						<li><a href="link1.html">Link 1</a></li>
+						<li><a href="link2.html">Link 2</a></li>
+						<li><a href="link3.html">Link 3</a></li>
 					</ul>
 				</nav>
-				<!-- /Navigationkomponente -->
+				<!-- /Navigationskomponente -->
+
 			</footer>
 		</div>
+	</section>
 	</div>
-	
-	<script defer="defer" src="../libraries/jquery-2.1.3.min.js"></script>
-	<script defer="defer" src="sources/js/ajax.js"></script>
-	<script defer="defer" src="sources/js/interface.js"></script>
+
+	<script src="sources/js/user.js"></script>
+	<script src="sources/js/interface.js"></script>
+
+	<!--<script src="../libraries/jquery-2.1.3.min.js"></script>
+	<script src="sources/js/jquery.js"></script>-->
 
 </body>
 </html>

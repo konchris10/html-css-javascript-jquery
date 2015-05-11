@@ -1,90 +1,46 @@
 // JAVASCRIPT
 
-// Einfache Objekttypen -> call by value
-// number ist ein 64 bit float (aka double float)
-var a = 1;
-var b = 'hallo Welt';
-console.log(a+a+b);
+// Objektbasiert!
+
+a = 1;
+
+// Einfachen Variablen
+// Call by Value
+var a = 1; // Number
+a = 'Wert';
+a.concat('b');
+
+a += 'b';
 a = true;
 
-
-// Komplexe Objekttypen -> call by reference
-a = {
-	key1 : 'value',
-	key2 : 'value'
-};
+console.log('1' !== 1);
 
 
-a = {
-	"key1" : "value",
-	"key2" : "value"
-};
-
-
-a = [true, "zwei", 3];
-b = 2;
-
-c = function (a) {
-	console.log(a);
-};
-
-
-c(b);
-
-console.log(typeof c) ;
-
-
-// Objektbasiertheit
-window = function () {
-	var document;
-	var navigator;
-
-	document.body;
-	document.images[0];
-	document.forms[0];
-	document.anchors[0];
-
-
-
-
-	var a = 2;
-	console.log(a);
-
+function b (a) {
+	return a;
 }
 
-window = undefined;
-console.log('- - - - -')
-var d;
+// Komplexe Typen
+// Call by Reference
+var obj = {
+	key1 : 	'value',
+	key2 : 	function (a) {
+				return a;
+			},
+};
 
-console.log(d);
-console.log(typeof d);
+var arr = [true, 'zwei', 3];
+console.log(arr.length);
 
-var e = '';
-if (!e) { console.log('e gibt es nicht ...')};
-
-console.log(e);
-console.log(typeof e);
-
-// for (var member in window) {
-// 	console.log(member + ' [' + typeof window[member] + ']');
-// }
-
-// Falsy values
-// false, null, undefined, '', 0
+// Funktionales Objekt
+var fn = function () {};
+console.log(typeof fn);
 
 
-console.log(false === '0');
-
-
-
-
-
-
-
-
-
-
-
+// Funktionen
+function log (m) {
+	console.log(m);
+}
 
 
 

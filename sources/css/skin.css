@@ -1,5 +1,5 @@
 div {
-	background : rgba(200,0,0,0.25);
+	background : rgba(200,0,0,0.15);
 }
 
-.nav li { background : rgba(0,200,0,0.5);} /* CSS3 (ab IE 9)*/
+.#nav li { background : rgba(0,200,0,0.5);} /* CSS3 (ab IE 9)*/
